@@ -7,6 +7,7 @@ func main() {
 	var locale, greeting string
 
 	fmt.Printf("Please, select a language(en,es,de)\n")
+
 	fmt.Scanln(&locale)
 	/*
 		if locale == "en" {
