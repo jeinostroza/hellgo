@@ -25,10 +25,18 @@ func argsswitch(input []string) string {
 }
 
 func main() {
-	locale := argsswitch(os.Args)
-	output := translate(locale)
-	if output == "" {
-		output = "Yo"
+	var option string = "yes"
+	for option == "yes" {
+		locale := argsswitch(os.Args)
+		output := translate(locale)
+		if output == "" {
+			output = "Yo"
+		}
+
+		fmt.Printf(output + " Go\n")
+		fmt.Println("Do you want othes language(yes/no)")
+		fmt.Scanln(&option)
 	}
-	fmt.Printf(output + " Go\n")
+
+	fmt.Println("GO Bye!!:)")
 }
